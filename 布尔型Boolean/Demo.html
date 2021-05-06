@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        var flag = true;
+        var flag = true; //布尔型flag
         var flag1 = false;
         console.log(flag + 1);//true 参与加法运算当 1 看；结果为 2
         console.log(flag1 + 1);//false 参与加法运算当 0 看；结果为 1
+        // 如果一个变量声明未赋值，就是 undefined 未定义数据类型
+        var str;
+        console.log(str);
+        var variable = undefined;
+        console.log(variable + 'red');//结果为 undefinedpink
+        console.log(variable + 1);//undefined 和数字相加，结果是NAN(不是一个数字) 
+        // null 空值
+        var space = null;
+        console.log(space + 'red');//结果为 nullpink
+        console.log(space + 1);//结果为1
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
