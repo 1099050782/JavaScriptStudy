@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.逻辑与短路运算 如果表达式1 ，结果为真，则返回表达式2；如果表达式1 ，结果为假，则返回表达式1
+        console.log(123 && 456);// 结果为 456
+        console.log(0 && 456);// 结果为 0(数字里面只有0为假)
+        // 如果有空的或者否定的为假，其余是真的  0 '' null undefined NaN
+        console.log(0 && 1 + 2 && 456 * 789);//结果为 0
+        console.log('' && 1 + 2 && 456 * 789);//结果为 ''
+        
+        //2.逻辑或短路运算 如果表达式1 ，结果为真，则返回表达式1；如果表达式1 ，结果为假，则返回表达式2
+        console.log(123 || 456);// 123
+        console.log(0 || 456);// 456
+        console.log(123 || 456 || 789 + 123);// 123
+        console.log(0 || 456 || 456 + 123);// 456
+        //例子
+        var num = 0;
+        console.log(123 || num++);//结果为 123
+        console.log(num);//结果为 0
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
