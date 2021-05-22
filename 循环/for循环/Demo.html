@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,15 +23,44 @@
         2. 去 i <= 100 来判断是否满足条件， 如果满足条件  就去执行 循环体  不满足条件退出循环 
         3. 最后去执行 i++   i++是单独写的代码 递增  第一轮结束 
         4. 接着去执行 i <= 100 如果满足条件  就去执行 循环体  不满足条件退出循环   第二轮 */
-        
+
         //可以让用户控制输出的次数
         var num = prompt('请您输入次数');
-        for (var i =1; i <= num; i++){
-            console.log('媳妇我错了');
+        for (var i = 1; i <= num; i++) {
+            console.log('我瘦了');
         }
+
+        //输入1人 1~100岁
+        for (var i = 1; i <= 100; i++) {
+            console.log('这个人今年' + i + '岁了');
+
+        }
+        for (var i = 1; i <= 100; i++) {
+            if (i == 1) {
+                console.log('这个人今年1岁了，他出生了');
+            } else if (i == 100) {
+                console.log('这个人今年100岁了，他死了');
+            } else {
+                console.log('这个人今年' + i + '岁了');
+
+            }
+        }
+        // for 循环重复执行某些操作 比如说我们做了100次加法运算
+        // 求 1~100 之间的整数累加和
+        // 需要循环100次，我们需要一个计数器  i  
+        // 需要一个存储结果的变量 sum ，但是初始值一定是 0
+        // 核心算法：1 + 2 + 3 + 4 ....   ，sum  =  sum + i;
+        var sum = 0; // 求和 的变量
+        for (var i = 1; i <= 100; i++) {
+            // sum = sum + i;
+            sum += i;
+        }
+        console.log(sum);
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
