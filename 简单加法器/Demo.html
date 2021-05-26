@@ -7,6 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        /* window.onload = function(){//先加载HTML和CSS
+            //onclick：当用户点击某个对象时调用的事件句柄。当用户点击某个组件的时候，就执行某个函数
+            document.getElementById("sub").onclick = ele;
+            document.getElementById("sua").onclick = ele;
+            document.getElementById("suc").onclick = ele;
+        };
+        function ele(){
+                var name = document.getElementById("a"); //返回指定id的对象
+                alert(name.value);
+            }; */
+            
         //先弹出一个输入框提示用户输入第一个值，保存
         var num1 = prompt('请输入第一个值: ');
         //再弹出一个输入框提示用户输入第二个值，保存
@@ -15,11 +26,19 @@
         var result = parseFloat(num1) + parseFloat(num2);
         //弹出警示框alert,输出结果
         alert('您的结果是:' + result);
+
     </script>
 </head>
 
 <body>
-
+    <!-- <form>
+        <input type="text" id="a" name="a">
+        <input type="text" id="b" name="b">
+        <input type="text" id="d" name="d">
+        <input type="button" id="sub" name="c" value="提交">
+        <input type="button" id="sua" name="c" value="a">
+        <input type="button" id="suc" name="c" value="c">
+    </form> -->
 </body>
 
-</html>l
+</html>
