@@ -19,8 +19,8 @@
                 document.write("☆");
             }
             document.write("<br />");
-        }
- */
+        } */
+        
         /* //2.倒金字塔
         for (var i = 4; i >= 1; i--) {
             // 2.我们根据规律知道,需要用for输出多余的空格
@@ -44,7 +44,7 @@
         }
         console.dir(sum); */
 
-        //4. 用户登录验证
+        /* //4. 用户登录验证，接收用户输入的用户名和密码，若用户名为 admin ，密码为123，则提示用户登陆成功，否则，让用户一直输入
         var msg = prompt('名字');
         var pwd = prompt('密码');
         while (msg != 'admin' || pwd != '123') {
@@ -58,7 +58,45 @@
             var msg = prompt('名字');
             var pwd = prompt('密码');
         } while (msg != 'admin' || pwd != '123');
-        alert('登录成功');
+        alert('登录成功'); */
+
+        /* // 需求 ：有一群人，如果3个人站一排多出一人，如果4个人站一排 多出来2个人；如果5人一拍，多出3人。
+        // 请问：这群人的数量（穷举：从1遍历到无穷大，找出符合条件的）
+        for (var i = 1; i <= Infinity; i++) {
+            // 假设总的人数就是 i   
+            if (i % 3 == 1 && i % 4 == 2 && i % 5 == 3) {
+                console.log("人数为" + i);
+                break;
+            }
+        } */
+
+        //简易ATM
+        var shuru = prompt('请输入操作:\n1.存钱\n2.取钱\n3.显示余额\n4.退出');
+        var money = 100;
+        while (money >= 10) {
+            if (shuru == '1') {
+                var msg = prompt('请输入存钱金额');
+                msg = parseInt(msg);
+                money = money + msg;
+                alert('余额为' + money);
+                shuru = prompt('请输入操作:\n 1.存钱\n2.取钱\n3.显示余额\n4.退出');
+            }
+            if (shuru == '2') {
+                var msg = prompt('请输入取钱金额');
+                msg = parseInt(msg);
+                money = money - msg;
+                alert('余额为' + money);
+                shuru = prompt('请输入操作:\n 1.存钱\n2.取钱\n3.显示余额\n4.退出');
+            }
+            if (shuru == '3') {
+                alert('余额为' + money);
+                shuru = prompt('请输入操作:\n 1.存钱\n2.取钱\n3.显示余额\n4.退出');
+            }
+            if (shuru == '4') {
+                shuru = false;
+                break;
+            }
+        }
     </script>
 </head>
 
