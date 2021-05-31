@@ -37,24 +37,51 @@
         //4.筛选数组
         //方法一
         var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
-        var newarr = [];
+        var newArr = [];
         var j = 0;
         for (var i = 0; i < arr.length; i++) {
             if (arr[i] >= 10) {
-                newarr[j] = arr[i];//新数组应从0开始，依次递增
+                newArr[j] = arr[i];//新数组应从0开始，依次递增
                 j++;
             }
         }
-        console.log(newarr);
+        console.log(newArr);
         //方法二
         var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
-        var newarr = [];//一开始 newarr.length 是 0
+        var newArr = [];//一开始 newarr.length 是 0
         for (var i = 0; i < arr.length; i++) {
             if (arr[i] >= 10) {
-                newarr[newarr.length] = arr[i];//新数组应从0开始，依次递增
+                newArr[newArr.length] = arr[i];//新数组应从0开始，依次递增
             }
         }
-        console.log(newarr);
+        console.log(newArr);
+
+        //5.删除指定数组元素
+        var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+        var newArr1 = [];
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] != 0) {
+                newArr1[newArr1.length] = arr[i];
+            }
+        }
+        console.log(newArr1);
+        
+        //6.翻转数组
+        var arr = ['red', 'green', 'blue', 'yellow'];
+        var newArr = [];
+        for (var i = arr.length - 1; i >= 0; i--) {
+            newArr[newArr.length] = arr[i];
+        }
+        console.log(newArr);
+
+        //7.交换两个变量的值
+        var num1 = 11;
+        var num2 = 12;
+        var temp;
+        temp = num1;
+        num1 = num2;
+        num2 = temp;
+        console.log(num1, num2);
     </script>
 </head>
 
