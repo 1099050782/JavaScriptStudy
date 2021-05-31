@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,9 +26,40 @@
             str += arr[i] + sep;
         }
         console.log(str);
+
+        //3.数组新增元素
+        var arr = [];
+        for (var i = 0; i < 50; i++) {
+            arr[i] = i + 1;//不要直接给数组名赋值，不然以前的元素全部没了
+        }
+        console.log(arr);
+
+        //4.筛选数组
+        //方法一
+        var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+        var newarr = [];
+        var j = 0;
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] >= 10) {
+                newarr[j] = arr[i];//新数组应从0开始，依次递增
+                j++;
+            }
+        }
+        console.log(newarr);
+        //方法二
+        var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+        var newarr = [];//一开始 newarr.length 是 0
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] >= 10) {
+                newarr[newarr.length] = arr[i];//新数组应从0开始，依次递增
+            }
+        }
+        console.log(newarr);
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
