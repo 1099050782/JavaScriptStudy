@@ -26,7 +26,7 @@
         sayHi();// 调用函数的时候千万不要忘记加小括号
 
 
-        //举例：
+        /* //举例：
         function getSum(num1, num2) {
             var sum = 0;
             for (var i = num1; i <= num2; i++) {
@@ -34,8 +34,20 @@
             }
             console.log(sum);
         }
-        getSum(1, 100);
-        getSum(10, 50);
+        getSum(1, 50);
+        getSum(10, 20); */
+
+        //举例：利用函数计算1~100之间的累加和
+        //1.声明函数
+        function getSum() {
+            var sum = 0;
+            for (var i = 1; i <= 100; i++) {
+                sum += i;
+            }
+            console.log(sum);
+        }
+        //2.调用函数
+        getSum();
     </script>
 </head>
 
