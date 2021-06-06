@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*// 1.用户输入任意两个数字的任意算数运算，并能弹出最后的运算结果(计算器)
+        var tan = prompt('1.+\n2.-\n3.x\n4.÷\n5.退出');
+        function suanshu(shuzi) {
+            var num1 = parseInt(prompt('第一个数字'));
+            var num2 = parseInt(prompt('第二个数字'));
+            var result;
+            // 判断要输入的状态
+            switch (parseInt(shuzi)) {
+                case 1:
+                    result = num1 + num2;
+                    break;
+                case 2:
+                    result = num1 - num2;
+                    break;
+                case 3:
+                    result = num1 * num2;
+                    break;
+                case 4:
+                    result = num1 / num2;
+                    break;
+                case 5:
+                    break;
+            }
+            alert(result);
+            tan = prompt('1.+运算\n2.减法运算\n3.乘法运算\n4.除法运算\n5.退出');
+        }
+        //封装函数，需要时调用
+        while (true) {
+            if (tan == '1') {
+                suanshu('1');
+            }
+            if (tan == '2') {
+                suanshu('2');
+            }
+            if (tan == '3') {
+                suanshu('3');
+            }
+            if (tan == '4') {
+                suanshu('4');
+            }
+            if (tan == '5') {
+                break;
+            }
+        }*/
+
+        /*// 2.用户输入任意两个数字的最大值，并能弹出运算后的结果
+        var num1 = parseInt(prompt('第一个数字'));
+        var num2 = parseInt(prompt('第二个数字'));
+        function getMax(num1, num2) {
+           /!* if (num1 > num2) {
+               return num1;
+            } else {
+                return num2;
+            }*!/
+          return num1 > num2 ? num1 : num2;
+       }
+        var result = getMax(num1, num2);
+        alert(result);*/
+
+        // 3.用户输入任意三个不同数字的最大值，并能弹出运算后的结果
+        var num1 = parseInt(prompt('第一个数字'));
+        var num2 = parseInt(prompt('第二个数字'));
+        var num3 = parseInt(prompt('第三个数字'));
+        function getMax(num1, num2, num3) {
+           /* var max;
+            max = num1 > num2 ? num1 : num2;
+            return max > num3 ? max : num3;*/
+            return  (num1 > num2 ? num1 : num2) > num3 ? (num1 > num2 ? num1 : num2) : num3;
+        }
+        var result = getMax(num1, num2, num3);
+        alert(result);
+
+        /*var a = parseInt(prompt('您想输入几个数字'));
+        var len = [a];
+        for (var i = 0; i < a; i++) {
+            len[i] = parseInt(prompt('第' + (i + 1) + '个数字'));
+        }
+
+        function getMax(len) {
+            var max;
+            max = len[0];
+            for (let i = 1; i < len.length; i++) {
+                if (max < len[i]) {
+                    max = len[i];
+                }
+            }
+            return max;
+        }
+
+        var result = getMax(len);
+        alert(result);*/
+        // 4.用户输入一个数判断是否是素数，并能弹出返回值（只能被1和自身整除的数（质数））
+    </script>
+</head>
+<body>
+
+</body>
+</html>
