@@ -63,28 +63,27 @@
         var result = getMax(num1, num2);
         alert(result);*/
 
-        // 3.用户输入任意三个不同数字的最大值，并能弹出运算后的结果
+        /*// 3.用户输入任意三个不同数字的最大值，并能弹出结果
         var num1 = parseInt(prompt('第一个数字'));
         var num2 = parseInt(prompt('第二个数字'));
         var num3 = parseInt(prompt('第三个数字'));
         function getMax(num1, num2, num3) {
-           /* var max;
+           /!* var max;
             max = num1 > num2 ? num1 : num2;
-            return max > num3 ? max : num3;*/
+            return max > num3 ? max : num3;*!/
             return  (num1 > num2 ? num1 : num2) > num3 ? (num1 > num2 ? num1 : num2) : num3;
         }
         var result = getMax(num1, num2, num3);
-        alert(result);
+        alert(result);*/
 
-        /*var a = parseInt(prompt('您想输入几个数字'));
+        /*//5. 用户输入任意数字，并返回最大值
+        var a = parseInt(prompt('您想输入几个数字'));
         var len = [a];
         for (var i = 0; i < a; i++) {
             len[i] = parseInt(prompt('第' + (i + 1) + '个数字'));
         }
-
         function getMax(len) {
-            var max;
-            max = len[0];
+            var max = len[0];
             for (let i = 1; i < len.length; i++) {
                 if (max < len[i]) {
                     max = len[i];
@@ -92,10 +91,34 @@
             }
             return max;
         }
-
         var result = getMax(len);
         alert(result);*/
-        // 4.用户输入一个数判断是否是素数，并能弹出返回值（只能被1和自身整除的数（质数））
+
+        // 4.用户输入一个数判断是否是素数，并能弹出返回值（只能被1和自身整除的数（质数 从2开始只能被1和自身整数的数））
+        var prime = parseInt(prompt('请输入数字'));
+        function getNum(prime) {
+           /* var j  = 0;
+            for (var i = 2; i < prime; i++) {
+                if (prime % i != 0 ) {
+
+                }else {
+                    j++;
+                }
+            }
+            if (j == 0){
+                return true;
+            }else {
+                return false;
+            }*/
+            for (var i = 2; i < prime; i++) {
+                if (prime % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        var res = getNum(prime);
+        alert(res);
     </script>
 </head>
 <body>
