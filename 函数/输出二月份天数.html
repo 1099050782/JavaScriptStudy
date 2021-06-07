@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    /*//用户输入年份，输出当年年份2月份的天数
+    var year = prompt('请输入年份');
+    function thenYear() {
+      if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+        return 29;
+      }return 28;
+    }
+    var day = thenYear();
+    alert(day);*/
+
+    //利用调用函数
+    function thenYear() {
+        var year = prompt('请输入年份');
+        //调用函数需要加小括号
+        if (isYear(year)) {
+            alert('当前年份是闰年,2月有29天');
+        }else {
+            alert('当前年份是平年,2月有28天');
+        }
+    }
+    thenYear();
+    //利用函数判断闰年
+    function isYear(year) {
+        var flag = false;
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+            flag = true;
+        }
+        return flag;
+    }
+    console.log(isYear(2001));
+    console.log(isYear(2000));
+  </script>
+</head>
+<body>
+
+</body>
+</html>
