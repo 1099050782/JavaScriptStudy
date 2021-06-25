@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    //n个数，排序
+   /* //冒泡排序
+    function fun(arr){
+      //外层循环管趟数 arr.length - 1
+      for (var i = 0; i <= arr.length; i++) {
+        //里层循环管交换次数
+        for (var j = 0; j <= arr.length - i - 1; j++) {
+          //判断一个数和后一个数
+          if (arr[j] > arr[j + 1]) {
+            var temp = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = temp;
+          }
+        }
+      }
+      return arr;
+    }
+    var arr = fun([1, 3, 7, 2, 4]);
+    console.log(arr);
+*/
+    //选择排序
+    /*1、通过下表取排序区间的第0个数为基数
+    2、排序区间基数以后，从右往左，寻找比基数小的，从左往右，寻找比基数大的，原地交换；
+    3、重复步骤2直到 i >= j；
+    4、将基数与下标为 i 的元素原地交换，从而实现划分；
+    5、递归排序基数左边的数，递归排序基数右边的数，返回数组。*/
+    //1.数组
+    //2.排序函数，arr，left，right
+    function sort(arr,left,right) {//判断数组是否不为一个数
+        if (left >= right){
+            return arr;
+        }
+        //3.基准数，下标
+        var i = left, j = right, temp = arr[left];
+        //4.排序
+        //4.1 i < j
+        while (i < j){
+            //下标从右向左运动，如果下标位置的数，比基准数大，则继续运动
+            while(i < j && arr[j] >= temp){
+                j--;
+            }
+            //下标从左向右运动，如果下标位置的数，比基准数小，则继续运动
+            while(i < j && arr[i] <= temp){
+                i++;
+            }
+            //下标没有相遇，排序还没完成则交换数字
+            if (i < j){
+                arr =f(arr,i,j);
+            }
+        }
+        //基准数与排序完成后的最后一个left下标指向的数字交换
+        f(arr,left,i);
+        sort(arr,left,i - 1);
+        sort(arr,i + 1,right);
+        return arr;
+    }
+    function f(arr,i,j) {
+        var a = arr[i];
+        arr[i] = arr[j];
+        arr[j] = a;
+        return arr;
+    }
+    var arr = [1, 3, 7, 2, 4];
+    sort(arr,0,arr.length - 1);
+    console.log(arr);
+
+
+
+    var quickSort_New = function(ary, left, right) {
+        if(left >= right) {
+            return ary;
+        }
+        var i = left, j = right, base = ary[left];
+
+        while (i < j) {
+            // 从右边起，寻找比基数小的数
+            while (i<j && ary[j] >= base) {
+                j--;
+            }
+
+            // 从左边起，寻找比基数大的数
+            while (i<j && ary[i] <= base) {
+                i++
+            }
+
+            if (i<j) {
+                var temp = ary[i];
+                ary[i] = ary[j];
+                ary[j] = temp;
+            }
+        }
+
+        ary[left] = ary[i];
+        ary[i] = base;
+
+        quickSort_New(ary, left, i-1);
+        quickSort_New(ary, i+1, right);
+
+        return ary;
+    }
+    var arr = [1, 3, 7, 2, 4];
+    quickSort_New(arr,0,arr.length - 1);
+    console.log(arr);
+
+    //快速排序
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
