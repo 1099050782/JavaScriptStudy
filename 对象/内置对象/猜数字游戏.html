@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        var random = getRandom(1, 10);
+        while (true) {
+            var num = prompt('猜一猜,请输入1~10之前的数字');
+            if (num > random) {
+                alert('猜大啦');
+            } else if (num < random) {
+                alert('猜小啦');
+            } else {
+                alert('猜对啦');
+                break;//退出循环
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

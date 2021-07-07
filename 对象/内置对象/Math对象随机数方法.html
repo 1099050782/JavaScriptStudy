@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 1.Math对象随机数方法   random() 返回一个随机的小数  0 =< x < 1  (这个方法里面不跟参数)
+        // 2. 代码
+        console.log(Math.random());
+        // 3. 想要得到两个数之间的随机整数 并且 包含这2个整数 (Math.floor(Math.random() * (max - min + 1)) + min;)
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        console.log(getRandom(1, 10));
+        // 4.举例：随机点名
+        var arr = ['张杰', '张丰毅', '张子枫', '李晨', '李思思'];
+        // console.log(arr[0]);
+        console.log(arr[getRandom(0, arr.length - 1)]);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
